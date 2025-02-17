@@ -2,20 +2,241 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+@font-face {
+    font-family: "AlexBrush";
+    src: url(../public/fonts/alex-brush/AlexBrush-Regular.ttf);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@font-face {
+    font-family: "Anybody";
+    src: url(../public/fonts/Anybody/static/Anybody-Black.ttf);
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@font-face {
+    font-family: "BagnardSans";
+    src: url(../public/fonts/BagnardSans/BagnardSans.otf);
 }
+
+@font-face {
+    font-family: "Brolimo";
+    src: url(../public/fonts/brolimo/BrolimoRegular.ttf);
+}
+
+@font-face {
+    font-family: "cabinetGrotesk";
+    src: url(../public/fonts/CabinetGrotesk_Complete/Fonts/OTF/CabinetGrotesk-Black.otf);
+}
+
+@font-face {
+
+    font-family: "Casta";
+    src: url(../public/fonts/Casta-free-font/Casta-Thin.otf);
+}
+
+@font-face {
+    font-family: "Cinzel";
+    src: url(../public/fonts/Cinzel/Cinzel-VariableFont_wght.ttf);
+}
+
+@font-face {
+
+    font-family: "ClashDisplay";
+    src: url(../public/fonts/ClashDisplay_Complete/Fonts/TTF/ClashDisplay-Variable.ttf);
+}
+
+@font-face {
+    font-family: "DroidSans";
+    src: url(../public/fonts/droid-sans-mono/DroidSansMono.ttf);
+
+}
+
+@font-face {
+    font-family: "Excon";
+    src: url(../public/fonts/Excon_Complete/Fonts/TTF/Excon-Variable.ttf);
+}
+
+@font-face {
+    font-family: "Highrise";
+    src: url(../public/fonts/highrise/HighriseFont-Demo-Regular.otf);
+}
+
+@font-face {
+    font-family: "Fira";
+    src: url(../public/fonts/Fira_Mono/FiraMono-Regular.ttf);
+
+}
+
+@font-face {
+
+    font-family: "Inconsolata";
+    src: url(../public/fonts/Inconsolata/Inconsolata.otf);
+}
+
+@font-face {
+
+    font-family: "Inter";
+    src: url(../public/fonts/Inter-4.1/InterVariable.ttf);
+}
+
+@font-face {
+    font-family: "LeagueScript";
+    src: url(../public/fonts/league-script-number-one-master/LeagueScriptNumberOne.otf);
+}
+
+@font-face {
+
+    font-family: "LeagueMono";
+    src: url(../public/fonts/LeagueMono-2.300/variable/TTF/LeagueMono-VF.ttf);
+}
+
+@font-face {
+    font-family: "LeagueSpartan";
+    src: url(../public/fonts/LeagueSpartan-2.220/variable/TTF/LeagueSpartan-VF.ttf);
+
+}
+
+@font-face {
+    font-family: "LemonMilk";
+    src: url(../public/fonts/lemon_milk/LEMONMILK-Regular.otf);
+}
+
+@font-face {
+    font-family: "LindenHill";
+    src: url(../public/fonts/linden-hill-master/Linden\ Hill.otf);
+}
+
+@font-face {
+
+    font-family: "MajorMono";
+    src: url(../public/fonts/Major_Mono_Display/MajorMonoDisplay-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Manrope";
+    src: url(../public/fonts/Manrope/Manrope-Regular.otf);
+}
+
+@font-face {
+    font-family: "Melodrama";
+    src: url(../public/fonts/Melodrama_Complete/Fonts/OTF/Melodrama-Regular.otf);
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url(../public/fonts/Montserrat_Complete/Fonts/OTF/Montserrat-Regular.otf);
+}
+
+@font-face {
+
+    font-family: "le-Murmure";
+    src: url(../public/fonts/murmure-main/fonts/le-murmure.otf);
+}
+
+@font-face {
+    font-family: "MuscularStrength";
+    src: url(../public/fonts/muscular_strength/MUSCULAR\ STRENGTH\ Bold.otf);
+
+}
+
+@font-face {
+
+    font-family: "OpenSans";
+    src: url(../public/fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf);
+}
+
+@font-face {
+    font-family: "Orbitron";
+    src: url(../public/fonts/orbitron-master/Orbitron\ Black.ttf);
+}
+
+@font-face {
+    font-family: "Outward";
+    src: url(../public/fonts/outward-master/fonts/webfonts/outward-block-webfont.ttf);
+}
+
+@font-face {
+    font-family: "Pencerio";
+    src: url(../public/fonts/Pencerio_Complete/Fonts/WEB/fonts/Pencerio-Hairline.ttf);
+}
+
+@font-face {
+    font-family: "Prociono";
+    src: url(../public/fonts/prociono-master/Prociono.otf);
+}
+
+@font-face {
+    font-family: "Pilowlava";
+    src: url(../public/fonts/pilowlava-master/Fonts/Pilowlava-Regular.otf);
+}
+
+@font-face {
+    font-family: "PTMono";
+    src: url(../public/fonts/PT_Mono/PTMono-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Raleway";
+    src: url(../public/fonts/Raleway-4.101/static/OTF/Raleway-Regular.otf);
+}
+
+@font-face {
+    font-family: "Ranade";
+    src: url(../public/fonts/Ranade_Complete/Fonts/OTF/Ranade-Regular.otf);
+}
+
+@font-face {
+
+    font-family: "RedHat";
+    src: url(../public/fonts/RedHatDisplay_Complete/Fonts/OTF/RedHatDisplay-Regular.otf);
+}
+
+@font-face {
+
+    font-family: "Rokkitt";
+    src: url(../public/fonts/rokkitt/Rokkitt-Regular.ttf);
+}
+
+@font-face {
+
+    font-family: "Satoshi";
+    src: url(../public/fonts/Satoshi_Complete/Fonts/OTF/Satoshi-Regular.otf);
+}
+
+@font-face {
+    font-family: "Skyscapers";
+    src: url(../public/fonts/skyscapers/Skyscapers.ttf);
+}
+
+@font-face {
+    font-family: "Soria";
+    src: url(../public/fonts/soria/soria-font.ttf);
+}
+
+@font-face {
+    font-family: "Vercetti";
+    src: url(../public/fonts/Vercetti/Vercetti-Regular.woff);
+}
+
+@font-face {
+
+    font-family: "Wangi";
+    src: url(../public/fonts/wangi/Wangi.ttf);
+}
+
+@font-face {
+    font-family: "WorkSans";
+    src: url(../public/fonts/Work_Sans/Work_Sans/WorkSans-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: "Yatra";
+    src: url(../public/fonts/Yatra_One/YatraOne-Regular.ttf);
+}
+
+
+
+
+
+
+
