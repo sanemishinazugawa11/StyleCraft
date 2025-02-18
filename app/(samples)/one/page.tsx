@@ -16,14 +16,57 @@ const page = () => {
     const [secondary, setSecondarycolor] = useState("")
     const [textColor, setTextColor] = useState("");
 
+    const [option, setOption] = useState("CSS")
+    const [isOpen, setIsopen] = useState(true)
 
-    const [isOpen, setIsopen] = useState(true);
+    useEffect(() => {
+        console.log(bgColor, font, primary, secondary, textColor)
+    })
+
+    useEffect(() => {
+        console.log(bgColor, font, primary, secondary, textColor)
+            , [bgColor, font, primary, secondary, textColor]
+    })
 
     bgColor.trim();
 
     return (
         <main style={{ backgroundColor: bgColor }} className={` px-3 sm:px-16 py-3 flex flex-col gap-5 max-w-screen min-h-screen overflow-x-hidden`}>
             <MenuBar states={{ font, primary, secondary, textColor, bgColor, setBgColor, setFont, setPrimarycolor, setSecondarycolor, setTextColor }} fonts={fonts} />
+            {
+                isOpen &&
+                <section className='absolute bg-neutral-700 backdrop-blur-md w-[90vw] py-1 sm:w-[80vw] lg:w-[50vw] h-[50vh]  left-1/2 -translate-x-[50%] z-50 top-20 flex flex-col gap-2 items-center rounded-lg'>
+                    <div className=' flex gap-2 p-2 justify-end items-center w-full h-[10%]'>
+                        <svg onClick={() => { setIsopen(!isOpen) }} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6   bg-neutral-500 rounded-full text-white p-1 hover:cursor-pointer hover:bg-slate-400 hover:transition-all hover:duration-200 hover:ease-in-out">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
+                        </svg>
+
+                    </div>
+                    <div className=' flex justify-evenly items-center  w-[80%]  h-[20%]'>
+                        <div onClick={() => { setOption("CSS") }} className='bg-neutral-800 text-slate-50 font-semibold font-redHat tracking-wide rounded-md w-[45%] text-center     hover:cursor-pointer flex justify-center items-center h-full gap-3'><h1 className='  w-full  text-center'>CSS</h1></div>
+                        <div onClick={() => { setOption("Tailwind") }} className='bg-neutral-800 text-slate-50 font-semibold font-redHat tracking-wide rounded-md w-[45%] text-center hover:cursor-pointer flex justify-center items-center h-full gap-3'><h2 className=' w-full  text-center'>Tailwind CSS</h2></div>
+                    </div>
+                    {option === "CSS" ?
+                        <div className='bg-neutral-400/70 text-sm sm:text-sm lg:text-lg mt-2 scale-95 font-redHat font-semibold text-black rounded-md select-text w-full h-full px-4 py-6 flex flex-col gap-2 items-start justify-evenly'>
+                            <h3>--background : {bgColor}</h3>
+                            <h3>--font: <span className='capitalize'>{font}</span> </h3>
+                            <h3>--primary:{primary}</h3>
+                            <h3>--secondary:{secondary}</h3>
+                        </div> :
+                        option === "Tailwind" &&
+                        <div className='bg-neutral-400/70 text-sm sm:text-sm lg:text-base text-black mt-2 rounded-md w-full h-[90%] scale-95 font-semibold font-redHat tracking-wide p-3 flex select-text flex-col  gap-2 items-start justify-evenly'>
+                            <span className=' w-full py-2 border-b-[1px]'>Paste it in your tailwind.config.ts/js file</span>
+                            <h3>colors: &#123;</h3>
+                            <h3>&nbsp;&nbsp;&nbsp;&nbsp;' background ' : '{bgColor}',</h3>
+                            <h3>&nbsp;&nbsp;&nbsp;&nbsp;' font ' : <span className='capitalize'>'{font}'</span>,</h3>
+                            <h3>&nbsp;&nbsp;&nbsp;&nbsp;' primary ' : '{primary}',</h3>
+                            <h3>&nbsp;&nbsp;&nbsp;&nbsp;' secondary ' : '{secondary}',</h3>
+                            <h3>&#125;</h3>
+                        </div>
+                    }
+
+                </section>
+            }
 
 
 
@@ -32,7 +75,7 @@ const page = () => {
                 <h1 style={{ color: primary }} className={`font-${font} sm:text-3xl  font-semibold`}>JohnDoe</h1>
 
                 <div className=' sm:p-6 flex gap-2 sm:gap-7'>
-                    <span style={{ color: primary }} className={`font-${font} sm:text-xl  font-semibold`}>Projects</span><span style={{ color: primary }} className={`font-${font} sm:text-xl  font-semibold`}>Github</span><span style={{ color: primary }} className={`font-${font} sm:text-xl  font-semibold`}>LinkedIn</span>
+                    <span style={{ color: primary }} className={`font-${font} sm:text-xl  font-semibold`}>Projects</span><span style={{ color: primary }} className={`font-${font} sm:text-xl  font-semibold`}>Github</span><span onClick={() => { setIsopen(!isOpen) }} style={{ color: primary }} className={`font-${font} sm:text-xl hover:cursor-pointer   font-semibold`}>Export</span>
                 </div>
             </div>
 

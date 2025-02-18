@@ -14,33 +14,64 @@ function Page() {
     const [primary, setPrimarycolor] = useState("")
     const [secondary, setSecondarycolor] = useState("")
     const [textColor, setTextColor] = useState("");
-
+    const [option, setOption] = useState("CSS")
+    const [isOpen, setIsopen] = useState(false)
 
 
     bgColor.trim();
 
 
-    useEffect(()=>{
-        console.log(bgColor,font,primary,secondary,textColor)
+    useEffect(() => {
+        console.log(bgColor, font, primary, secondary, textColor)
     })
-    
-    useEffect(()=>{
-        console.log(bgColor,font,primary,secondary,textColor)
-    },[bgColor,font,primary,secondary,textColor])
+
+    useEffect(() => {
+        console.log(bgColor, font, primary, secondary, textColor)
+    }, [bgColor, font, primary, secondary, textColor])
 
 
     return (
 
         <main style={{ backgroundColor: bgColor }} className=' max-w-screen scroll-smooth min-h-screen '>
 
-            {/* <section className='absolute bg-red-500 w-[90vw] sm:w-[80vw] lg:w-[50vw] h-[50vh] p-3 left-1/2 -translate-x-[50%] z-50 top-20 rounded-lg'>
-                <div className='bg-green-400 flex items-center justify-around w-full h-[20%]'>
-                    <div className='bg-yellow-500 w-auto h-full gap-3'> d</div>
-                    <div className='bg-yellow-500 w-auto h-full gap-3'> d</div>
-                    <div className='bg-yellow-500 w-auto h-full gap-3'> d</div>
-                </div>
-            </section> */}
+            {
+                isOpen &&
+                <section className='absolute bg-neutral-700 backdrop-blur-md w-[90vw] py-1 sm:w-[80vw] lg:w-[50vw] h-[65vh]  left-1/2 -translate-x-[50%] z-50 top-20 flex flex-col gap-2 items-center rounded-lg'>
+                    <div className=' flex gap-2 p-2 justify-end items-center w-full h-[10%]'>
+                        <svg onClick={() => { setIsopen(!isOpen) }} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6   bg-neutral-500 rounded-full text-white p-1 hover:cursor-pointer hover:bg-slate-400 hover:transition-all hover:duration-200 hover:ease-in-out">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
+                        </svg>
 
+                    </div>
+                    <div className=' flex justify-evenly items-center  w-[80%]  h-[20%]'>
+                        <div onClick={() => { setOption("CSS") }} className='bg-neutral-800 text-slate-50 font-semibold font-redHat tracking-wide rounded-md w-[45%] text-center     hover:cursor-pointer flex justify-center items-center h-full gap-3'><h1 className='  w-full  text-center'>CSS</h1></div>
+                        <div onClick={() => { setOption("Tailwind") }} className='bg-neutral-800 text-slate-50 font-semibold font-redHat tracking-wide rounded-md w-[45%] text-center hover:cursor-pointer flex justify-center items-center h-full gap-3'><h2 className=' w-full  text-center'>Tailwind CSS</h2></div>
+                    </div>
+                    {option === "CSS" ?
+                        <div className='bg-neutral-400/70 text-sm sm:text-sm lg:text-lg mt-2 scale-95 font-redHat font-semibold text-black rounded-md select-text w-full h-full px-4 py-6 flex flex-col gap-2 items-start justify-evenly'>
+                            <h3>--background : {bgColor}</h3>
+                            <h3>--font: <span className='capitalize'>{font}</span> </h3>
+                            <h3>--primary:{primary}</h3>
+                            <h3>--secondary:{secondary}</h3>
+                            <h3>--textcolor:{textColor}</h3>
+
+                        </div> :
+                        option === "Tailwind" &&
+                        <div className='bg-neutral-400/70 text-sm sm:text-sm lg:text-base text-black mt-2 rounded-md w-full h-[90%] scale-95 font-semibold font-redHat tracking-wide p-3 flex select-text flex-col  gap-2 items-start justify-evenly'>
+                            <span className=' w-full py-2 border-b-[1px]'>Paste it in your tailwind.config.ts/js file</span>
+                            <h3>colors: &#123;</h3>
+                            <h3>&nbsp;&nbsp;&nbsp;&nbsp;' background ' : '{bgColor}',</h3>
+                            <h3>&nbsp;&nbsp;&nbsp;&nbsp;' font ' : <span className='capitalize'>'{font}'</span>,</h3>
+                            <h3>&nbsp;&nbsp;&nbsp;&nbsp;' primary ' : '{primary}',</h3>
+                            <h3>&nbsp;&nbsp;&nbsp;&nbsp;' secondary ' : '{secondary}',</h3>
+                            <h3>&nbsp;&nbsp;&nbsp;&nbsp;' textcolor ' : '{textColor}',</h3>
+
+                            <h3>&#125;</h3>
+                        </div>
+                    }
+
+                </section>
+            }
             <section className="menubar grid grid-cols-5   md:justify-center md:items-center gap-1  md:gap-3 md:flex md:flex-row fixed z-50   bottom-5 left-3 sm:left-5 md:left-7 lg:left-10 py-2 px-3 md:px-6 md:py-3 rounded-lg backdrop-blur-md w-[95%] h-[35vh] md:h-[15vh] text-slate-100 bg-neutral-600/80">
 
                 <div className='col-span-2 md:w-full h-full flex flex-col gap-1 justify-center px-2 py-2  bg-black/60 rounded-md backdrop-blur-xl  ' >
@@ -89,12 +120,12 @@ function Page() {
                         Github
                     </a>
 
-                    <a href='' style={{
+                    <button onClick={() => { setIsopen(!isOpen) }} style={{
                         color: textColor,
 
                     }} className={`font-${font}  text-black  text-sm sm:text-lg md:text-xl lg:text-xl font-semibold px-3 py-2 rounded-md`}>
                         Export colors
-                    </a>
+                    </button>
                 </div>
             </div>
 
@@ -191,3 +222,5 @@ function Page() {
 }
 
 export default Page
+
+
