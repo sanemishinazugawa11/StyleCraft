@@ -8,7 +8,16 @@ This app consists of sample websites on which you can try different design combi
 
 This is a next.js project bootstrapped with create-next-app
 
-First, run the development server:
+
+Install NodeJS
+Clone the repository.
+
+Install all the dependencies.
+```bash
+npm install
+```
+
+Run the development server:
 
 ```bash
 npm run dev
