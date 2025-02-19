@@ -9,7 +9,8 @@ This app consists of sample websites on which you can try different design combi
 This is a next.js project bootstrapped with create-next-app
 
 
-Install NodeJS
+Install NodeJS.
+
 Clone the repository.
 
 Install all the dependencies.
