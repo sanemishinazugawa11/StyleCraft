@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 
+
 @font-face {
     font-family: "AlexBrush";
     src: url(../public/fonts/alex-brush/AlexBrush-Regular.ttf);

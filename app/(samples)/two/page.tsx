@@ -110,7 +110,7 @@ function Page() {
 
             <div style={{
                 borderColor: primary,
-            }} className="nav  w-full h-24 sm:h-32 flex justify-between border-b-2 items-center px-5">
+            }} className="nav  w-full h-24 sm:h-32 flex justify-between border-b-[1px] items-center px-5">
                 <h1 style={{ color: textColor }} className={`font-${font} text-xl sm:text-3xl font-semibold`}>StyleCraft</h1>
                 <div className=' flex gap-2 justify-end w-full h-auto'>
                     <a href='' style={{
@@ -132,9 +132,9 @@ function Page() {
 
             <section className="center w-full h-screen flex flex-col px-2 md:flex md:flex-row justify-between mt-10">
                 <div className='md:w-1/2  lg:h-auto py-2 flex flex-col gap-3 md:gap-5 justify-start md:justify-center px-3 '>
-                    <h1 style={{ color: textColor }} className={`font-${font} text-3xl sm:text-4xl  lg:text-5xl mt-3 text-black font-extrabold text-start`}>Choose the right font for your website.</h1>
+                    <h1 style={{ color: textColor }} className={`font-${font} text-3xl sm:text-4xl  lg:text-5xl mt-3 text-black font-extrabold text-start`}>Choose the right font and color combination for your website.</h1>
                     <h3 style={{ color: textColor }} className={`font-${font} text-2xl sm:text-3xl  lg:text-4xl  text-neutral-800 font-semibold text-start `}>Simple process for figuring right font and color combination.</h3>
-                    <h4 style={{ color: textColor }} className={`font-${font} text-xl sm:text-2xl  lg:text-3xl  rounded-lg  text-neutral-800  font-medium text-start`}>Try colors on highlevel layout design of a website.</h4>
+                    <h4 style={{ color: textColor }} className={`font-${font} text-xl sm:text-2xl  lg:text-3xl  rounded-lg  text-neutral-800  font-semibold text-start`}>Try colors on highlevel layout design of a website.</h4>
 
                 </div>
                 <div className='md:w-1/2 bg-slate-300 rounded-md  scale-100 flex flex-col gap-1 mt-10 md:mt-0 justify-around h-full p-3 md:p-5'>
@@ -182,7 +182,7 @@ function Page() {
                         <h2 className={`text-white text-center text-sm sm:text-lg font-${font} font-semibold md:text-xl xl:text-2xl`}>More features coming soon!!</h2>
                     </div>
                     <div style={{ backgroundColor: secondary }} className='col-span-4  flex justify-center gap-1 items-center md:col-span-2 bg-slate-200 rounded-md  h-full'>
-                        <a className={`font-${font} text-center font-semibold   text-sm sm:text-lg lg:text-xl`} href="https://coolors.co/" target='_blank'>Generate colour pallets    </a>
+                        <a className={`font-${font} text-center font-semibold   text-sm sm:text-lg lg:text-xl`} href="https://coolors.co/" target='_blank'>Find colour pallets    </a>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-3 sm:size-4 md:size-5 ">
                             <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
                         </svg>
@@ -200,7 +200,7 @@ function Page() {
 
             </section>
 
-            <section className="footer w-full p-2 h-[25vh] sm:h-[20vh]  rounded-md mt-10 mb-80 md:mb-48 ">
+            <section className="footer w-full p-2 h-[25vh] sm:h-[20vh]  rounded-md mt-10  ">
                 <div style={{ backgroundColor: primary }} className='rounded-md bg-slate-200 w-full h-full  p-2 flex flex-col justify-evenly items-center'>
                     <div className='w-full h-auto flex flex-col sm:flex sm:flex-row justify-center items-center gap-2 mb-2 sm:mb-0 sm:gap-5'>
                         <input style={{
@@ -216,6 +216,8 @@ function Page() {
                     </div>
                 </div>
             </section>
+
+            <section style={{backgroundColor : bgColor}} className='w-full h-[40vh] lg:h-[20vh] '></section>
         </main>
 
     )

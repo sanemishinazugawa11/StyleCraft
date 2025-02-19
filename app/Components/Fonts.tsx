@@ -21,7 +21,7 @@ const Fonts = () => {
   //   })
   // })
   return (
-    <div className='fonts w-full h-[40vh] col-span-4 flex justify-center items-center text-center gap-10 p-5 bg-indigo-500  text-black overflow-hidden'>
+    <div className='fonts w-full h-[40vh] col-span-4 flex justify-center items-center text-center gap-10 p-5 bg-indigo-500 mt-10  text-black overflow-hidden'>
       <h1 className='text-6xl font-alexBrush'>Alex Brush</h1>
       <h1 className='text-6xl font-anybody'>Anybody</h1>
       <h1 className='text-6xl font-bagnardSans'>BagnardSans</h1>
