@@ -1,6 +1,4 @@
 "use client"
-import Fonts from "./Components/Fonts";
-import Hero from "./Components/Hero";
 import first from "../public/Images/firstMockup.png";
 import second from "../public/Images/Second.png";
 import Image from 'next/image';
@@ -10,9 +8,7 @@ export default function Home() {
 
   const router = useRouter();
 
-  const handleNavigate = () => {
-    router.push('/one'); // Replace with your target page path
-  };
+
 
   return (
 
@@ -20,7 +16,7 @@ export default function Home() {
     <main className="  flex flex-col   gap-5 w-full min-h-screen overflow-y-scroll overflow-x-hidden bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))] ">
 
 
-      <div className="nav   h-[10vh] flex justify-start items-center mt-5 px-10">
+      <div className="nav   h-[10vh] flex justify-start items-center mt-5 px-10 border-b-[1px] border-neutral-600">
         <h1 className="font-manrope font-bold text-white text-lg md:text-xl 2xl:text-3xl ">StyleCraft</h1>
       </div>
 
