@@ -16,7 +16,7 @@ export default function Home() {
     <main className="  flex flex-col   gap-5 w-full min-h-screen overflow-y-scroll overflow-x-hidden bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))] ">
 
 
-      <div className="nav   h-[10vh] flex justify-start items-center mt-5 px-10 border-b-[1px] border-neutral-600">
+      <div className="nav   h-[10vh] flex justify-start items-center  px-10 border-b-[1px] border-neutral-600">
         <h1 className="font-manrope font-bold text-white text-lg md:text-xl 2xl:text-3xl ">StyleCraft</h1>
       </div>
 
@@ -30,11 +30,11 @@ export default function Home() {
 
       <div className="images relative flex flex-col gap-10 justify-evenly items-center  w-full  scale-95">
         <div className="w-full relative">
-          <h2 onClick={() => { router.push('/one') }} className="text-black font-manrope font-semibold border-2 border-neutral-600 absolute bg-slate-50 px-10 rounded-full  py-3 right-5 sm:right-10 bottom-10 hover:cursor-pointer">Try this!</h2>
+          <h2 onClick={() => { router.push('/one') }} className="text-black font-manrope font-semibold border-2 border-neutral-600 absolute bg-slate-50 px-10 rounded-full  py-3 right-5 sm:right-10 bottom-10 hover:select-none hover:cursor-pointer">Try this!</h2>
           <Image className="object-cover h-[50vh] lg:h-[70vh] rounded-lg w-full " src={first} alt="first" />
         </div>
         <div className="w-full relative">
-          <h2 onClick={() => { router.push('/two') }} className="text-white font-manrope font-semibold border-2 border-neutral-200 absolute bg-neutral-900 px-10 rounded-full  py-3 right-5 sm:right-10 bottom-10 hover:cursor-pointer">Try this!</h2>
+          <h2 onClick={() => { router.push('/two') }} className="text-white font-manrope font-semibold border-2 border-neutral-200 absolute bg-neutral-900 px-10 rounded-full  py-3 right-5 sm:right-10 bottom-10 hover:select-none hover:cursor-pointer">Try this!</h2>
           <Image className="object-cover h-[50vh] lg:h-[70vh] rounded-lg w-full " src={second} alt="second" />
         </div>
       </div>

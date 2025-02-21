@@ -112,7 +112,7 @@ function Page() {
                 </div>
             </section>
 
-            <section className="about  w-full h-[80vh] mt-20   gap-5 flex flex-col sm:flex sm:flex-row justify-center sm:justify-between">
+            <section className="about  w-full h-[80vh] sm:mt-20   gap-5 flex flex-col sm:flex sm:flex-row justify-center sm:justify-between">
                 <div className='sm:w-[50%]  flex flex-col  justify-end   p-3'>
                     <span style={{ color: secondary,fontFamily:font }} className={`text-lg font-${font} border-b-[0.5px] border-slate-600 `}>About </span>
                     <h2 style={{ color: secondary  ,fontFamily:font }} className={`text-start font-semibold font-${font} text-sm sm:text-xl md:text-2xl tracking-wide lg:text-4xl `}>
@@ -131,7 +131,7 @@ function Page() {
             <section style={{
                 backgroundColor: bgColor,
                 borderColor: primary
-            }} className="footer w-full h-[20vh]  border-[0.5px]  rounded-lg mt-10 px-5 py-2 mb-64  md:mb-48">
+            }} className="footer w-full h-[20vh]  border-[0.5px]  rounded-lg sm:mt-10 px-5 py-2 mb-64  md:mb-48">
                 <h2 style={{ color: primary  ,fontFamily:font   }} className={`text-3xl font-${font} font-semibold `}>JohnDoe.com</h2>
                 <h2 style={{ color: secondary,fontFamily:font }} className={`text-xl font-${font} font-semibold `}>Made with love!</h2>
             </section>
