@@ -160,8 +160,8 @@ function Page() {
                             className='w-full h-full object-cover rounded-lg absolute -z-10'
                         />
                         <div style={{ backgroundColor: primary }} className='absolute w-full h-full bg-black/60 backdrop-blur-md'></div>
-                        <h2 style={ { fontFamily : font}} className={`font-${font} text-lg md:text-xl z-10 text-white font-semibold text-center text-wrap lg:text-3xl`}>Why StyleCraft?</h2>
-                        <h2 style={ { fontFamily : font}} className={`font-${font} text-sm md:text-lg z-10 text-white  text-center text-wrap lg:text-xl`}>Color pallets are good, but try those colors on a real website.</h2>
+                        <h2 style={ { fontFamily : font , color : textColor}} className={`font-${font} text-lg md:text-xl z-10 text-white font-semibold text-center text-wrap lg:text-3xl`}>Why StyleCraft?</h2>
+                        <h2 style={ { fontFamily : font , color : textColor}} className={`font-${font} text-sm md:text-lg z-10 text-white  text-center text-wrap lg:text-xl`}>Color pallets are good, but try those colors on a real website.</h2>
                     </div>
                     <div className='relative overflow-hidden h-full col-span-4 md:col-span-2 rounded-lg  px-3 flex flex-col gap-2 justify-center items-center'>
                         <Image
@@ -172,8 +172,8 @@ function Page() {
                             className='w-full h-full object-cover rounded-lg absolute -z-10'
                         />
                         <div style={{ backgroundColor: primary }} className='absolute w-full h-full bg-black/60 backdrop-blur-md'></div>
-                        <h2 style={{fontFamily : font}} className={`font-${font} text-lg md:text-xl z-10 text-white font-semibold text-center text-wrap lg:text-3xl`}>Its simple and realistic!</h2>
-                        <h2 style={{fontFamily : font}} className={`font-${font} text-sm md:text-lg z-10 text-white  text-center text-wrap lg:text-xl`}>Color Palettes make it hard to pick. This tool distributes the colors on a real website,Push a few buttons, and there you have it! Your very own branding colors, ready to export.</h2>
+                        <h2 style={{fontFamily : font, color:textColor}} className={`font-${font} text-lg md:text-xl z-10 text-white font-semibold text-center text-wrap lg:text-3xl`}>Its simple and realistic!</h2>
+                        <h2 style={{fontFamily : font, color:textColor}} className={`font-${font} text-sm md:text-lg z-10 text-white  text-center text-wrap lg:text-xl`}>Color Palettes make it hard to pick. This tool distributes the colors on a real website,Push a few buttons, and there you have it! Your very own branding colors, ready to export.</h2>
 
                     </div>
                 </div>
