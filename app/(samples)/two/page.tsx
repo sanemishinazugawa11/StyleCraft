@@ -213,7 +213,7 @@ function Page() {
                     </div>
                     <div className='w-full h-auto flex gap-1  justify-center items-center '>
                         <h2 style={{ color: textColor, fontFamily: font }} className={`font-${font}  text-xl md:text-2xl font-semibold`}>StyleCraft ,</h2>
-                        <h3 style={{ color: textColor, fontFamily: font }} className={`font-${font} text-xl md:text-2xl font-semibold`}>Made with love!</h3>
+                        <h3 style={{ color: textColor, fontFamily: font }} className={`font-${font} text-xl md:text-2xl font-semibold`}>Made by <a className='underline' target='_blank' href="https://github.com/sanemishinazugawa11/StyleCraft">Bhuvan</a></h3>
                     </div>
                 </div>
             </section>

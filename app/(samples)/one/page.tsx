@@ -132,7 +132,7 @@ function Page() {
                 borderColor: primary
             }} className="footer w-full h-[20vh] sm:mt-8  border-[0.5px]  rounded-lg  px-5 py-2 mb-64  md:mb-48">
                 <h2 style={{ color: primary, fontFamily: font }} className={`text-3xl font-${font} font-semibold `}>JohnDoe.com</h2>
-                <h2 style={{ color: secondary, fontFamily: font }} className={`text-xl font-${font} font-semibold `}>Made with love!</h2>
+                <h2 style={{ color: secondary, fontFamily: font }} className={`text-xl font-${font} font-semibold `}>All rights reserved.</h2>
             </section>
         </main>
 
