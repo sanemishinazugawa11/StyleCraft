@@ -4,6 +4,11 @@
 StyleCraft is a website where you can try different font and color combinations.
 This app consists of sample websites on which you can try different design combinations.
 
+
+# Downloading the fonts 
+Get the font from /public/fonts folder and use it int your project.This folder contains opensourced free-licensed fonts to use.
+
+
 # Local setup
 
 This is a next.js project bootstrapped with create-next-app
