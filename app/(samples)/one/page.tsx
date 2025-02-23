@@ -2,6 +2,7 @@
 import MenuBar from '@/app/Components/MenuBar'
 import Image from 'next/image'
 import React, { useState } from 'react'
+import Link from 'next/link';
 
 function Page() {
     const [bgColor, setBgColor] = useState("");
@@ -56,16 +57,30 @@ function Page() {
                 </section>
             }
 
-
-
-
             <div className="nav border-b-[0.5px] border-slate-600 w-full h-16 flex items-center justify-between sm:h-24">
-                <h1 style={{ color: primary, fontFamily: font }} className={`font-${font} sm:text-3xl  font-semibold`}>JohnDoe</h1>
-
-                <div className=' sm:p-6 flex gap-2 sm:gap-7'>
-                    <span style={{ color: primary, fontFamily: font }} className={`font-${font} sm:text-xl  font-semibold`}>Projects</span><a href='https://github.com/sanemishinazugawa11/StyleCraft' target='_blank' style={{ color: primary, fontFamily: font }} className={`font-${font} sm:text-xl  font-semibold`}>Github</a><span onClick={() => { setIsopen(!isOpen) }} style={{ color: primary, fontFamily: font }} className={`font-${font} sm:text-xl hover:cursor-pointer   font-semibold`}>Export</span>
+                <Link href="/" passHref>
+                    <span
+                        style={{ color: primary, fontFamily: font, fontStyle: 'italic' }}
+                        className={`font-${font} sm:text-xl font-semibold bg-black text-white rounded-full py-2 px-3 flex items-center gap-2 border-2 border-black transition-colors duration-300 hover:bg-white hover:text-black hover:border-black`}>
+                        ← Back Home
+                    </span>
+                </Link>
+                <h1 style={{ color: primary, fontFamily: font, textAlign: 'left', marginRight: '70%', }} className={`font-${font} sm:text-3xl font-semibold`}>
+                    JohnDoe
+                </h1>
+                <div className='flex gap-2 sm:gap-4'>
+                    <span style={{ color: primary, fontFamily: font }} className={`font-${font} sm:text-xl font-semibold`}>
+                        Projects
+                    </span>
+                    <a href='https://github.com/sanemishinazugawa11/StyleCraft' target='_blank' style={{ color: primary, fontFamily: font }} className={`font-${font} sm:text-xl font-semibold`}>
+                        Github
+                    </a>
+                    <span onClick={() => { setIsopen(!isOpen) }} style={{ color: primary, fontFamily: font }} className={`font-${font} sm:text-xl hover:cursor-pointer font-semibold`}>
+                        Export
+                    </span>
                 </div>
             </div>
+
 
             <div className=" flex items-center w-full h-16  ">
                 <h3 style={{ color: secondary, fontFamily: font }} className={`sm:text-lg  font-medium font-${font}`}>Oh, Hello there!</h3>

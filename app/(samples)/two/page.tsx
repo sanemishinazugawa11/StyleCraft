@@ -1,5 +1,6 @@
 "use client"
 import Image from 'next/image';
+import Link from 'next/link';
 import React, { useState } from 'react'
 
 function Page() {
@@ -98,26 +99,38 @@ function Page() {
 
             <div style={{
                 borderColor: primary,
-            }} className="nav  w-full h-24 sm:h-32 flex justify-between border-b-[1px] items-center px-5">
-                <h1 style={{ color: textColor, fontFamily: font }} className={`font-${font} text-xl sm:text-3xl font-semibold`}>StyleCraft</h1>
-                <div className=' flex gap-2 justify-end w-full h-auto'>
+            }} className="nav w-full h-24 sm:h-32 flex justify-between items-center px-5 border-b-[1px]">
+                <Link href="/" passHref>
+                    <span
+                        style={{
+                            color: primary, 
+                            fontFamily: font, 
+                            fontStyle: 'italic', 
+                            whiteSpace: 'nowrap'
+                        }}
+                        className={`font-${font} sm:text-xl font-semibold bg-black text-white rounded-full py-2 px-5 inline-flex items-center gap-2 border-2 border-black transition-colors duration-300 hover:bg-white hover:text-black hover:border-black`}>
+                        ← Back Home
+                    </span>
+                </Link>
+                <h1 style={{ color: textColor, fontFamily: font, marginLeft: '1%' }} className={`font-${font} text-xl sm:text-3xl font-semibold`}>
+                    StyleCraft
+                </h1>
+                <div className='flex gap-2 justify-end w-full h-auto'>
                     <a href='https://github.com/sanemishinazugawa11/StyleCraft' target='_blank' style={{
                         color: textColor,
                         fontFamily: font
-
-                    }} className={`font-${font}  text-black  text-sm sm:text-lg md:text-xl lg:text-xl font-semibold px-3 py-2 rounded-md`}>
+                    }} className={`font-${font} text-black text-sm sm:text-lg md:text-xl lg:text-xl font-semibold px-3 py-2 rounded-md`}>
                         Github
                     </a>
 
                     <button onClick={() => { setIsopen(!isOpen) }} style={{
                         color: textColor,
                         fontFamily: font
-                    }} className={`font-${font}  text-black  text-sm sm:text-lg md:text-xl lg:text-xl font-semibold px-3 py-2 rounded-md`}>
+                    }} className={`font-${font} text-black text-sm sm:text-lg md:text-xl lg:text-xl font-semibold px-3 py-2 rounded-md`}>
                         Export colors
                     </button>
                 </div>
             </div>
-
 
             <section className="center w-full h-screen flex flex-col px-2 md:flex md:flex-row justify-between mt-10">
                 <div className='md:w-1/2  lg:h-auto py-2 flex flex-col gap-3 md:gap-5 justify-start md:justify-center px-3 '>
