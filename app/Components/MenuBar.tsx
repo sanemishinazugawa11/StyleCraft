@@ -27,7 +27,7 @@ const MenuBar: React.FC<menuprops> = ({states, fonts }) => {
 
 
     return (
-        <section className="menubar grid grid-cols-5  md:justify-center md:items-center gap-1  md:gap-3 md:flex md:flex-row fixed z-50   bottom-10 left-5 lg:left-10 py-2 px-3 md:px-6 md:py-3 rounded-lg backdrop-blur-md w-[95%] h-[25vh] md:h-[15vh] text-slate-100 bg-neutral-600/80">
+        <section className="menubar grid grid-cols-5  md:justify-center md:items-center gap-1  md:gap-3 md:flex md:flex-row fixed z-50   bottom-10 left-5 lg:left-10 py-2 px-3 md:px-6 md:py-3 rounded-lg backdrop-blur-md w-[95%] h-[25vh] md:h-[20vh] lg:h-[18vh] text-slate-100 bg-neutral-600/80">
 
             <div className='col-span-2 md:w-full h-full flex flex-col gap-1 justify-center px-2 py-2  bg-black/60 rounded-md backdrop-blur-xl  ' >
                 <h2 className='font-redHat text-lg md:text-xl'>Background</h2>

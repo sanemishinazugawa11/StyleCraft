@@ -38,8 +38,8 @@ function Page() {
                     </div>
                     {option === "CSS" ?
                         <div className='bg-neutral-400/70 text-sm sm:text-sm lg:text-lg mt-2 scale-95 font-redHat font-semibold text-black rounded-md select-text w-full h-full px-4 py-6 flex flex-col gap-2 items-start justify-evenly'>
+                            <h3 className='w-full border-b-[1px] border-slate-50'>Download the font from <a target='_blank' className='underline' href="https://github.com/sanemishinazugawa11/fonts">Here</a> </h3>
                             <h3>--background : {bgColor}</h3>
-                            <h3>--font: <span className='capitalize'>{font}</span> </h3>
                             <h3>--primary:{primary}</h3>
                             <h3>--secondary:{secondary}</h3>
                             <h3>--textcolor:{textColor}</h3>
@@ -47,10 +47,9 @@ function Page() {
                         </div> :
                         option === "Tailwind" &&
                         <div className='bg-neutral-400/70 text-sm sm:text-sm lg:text-base text-black mt-2 rounded-md w-full h-[90%] scale-95 font-semibold font-redHat tracking-wide p-3 flex select-text flex-col  gap-2 items-start justify-evenly'>
-                            <span className=' w-full py-2 border-b-[1px]'>Paste it in your tailwind.config.ts/js file</span>
+                            <span className=' w-full py-2 border-b-[1px]'>Paste it in your tailwind.config.ts/js file and download the font from <a className='underline' target='_blank' href="https://github.com/sanemishinazugawa11/fonts">Here</a> </span>
                             <h3>colors: &#123;</h3>
                             <h3>&nbsp;&nbsp;&nbsp;&nbsp; &apos; background &apos; : &apos;{bgColor}&apos;,</h3>
-                            <h3>&nbsp;&nbsp;&nbsp;&nbsp;&apos; font &apos; : <span className='capitalize'>&apos;{font}&apos;</span>,</h3>
                             <h3>&nbsp;&nbsp;&nbsp;&nbsp;&apos; primary &apos; : &apos;{primary}&apos;,</h3>
                             <h3>&nbsp;&nbsp;&nbsp;&nbsp;&apos; secondary &apos; : &apos;{secondary}&apos;,</h3>
                             <h3>&nbsp;&nbsp;&nbsp;&nbsp;&apos; textcolor &apos; : &apos;{textColor}&apos;,</h3>
@@ -61,7 +60,7 @@ function Page() {
 
                 </section>
             }
-            <section className="menubar grid grid-cols-5   md:justify-center md:items-center gap-1  md:gap-3 md:flex md:flex-row fixed z-50   bottom-5 left-3 sm:left-5 md:left-7 lg:left-10 py-2 px-3 md:px-6 md:py-3 rounded-lg backdrop-blur-md w-[95%] h-[35vh] md:h-[15vh] text-slate-100 bg-neutral-600/80">
+            <section className="menubar grid grid-cols-5   md:justify-center md:items-center gap-1  md:gap-3 md:flex md:flex-row fixed z-50   bottom-5 left-3 sm:left-5 md:left-7 lg:left-10 py-2 px-3 md:px-6 md:py-3 rounded-lg backdrop-blur-md w-[95%] h-[35vh] md:h-[20vh] lg:h-[18vh] text-slate-100 bg-neutral-600/80">
 
                 <div className='col-span-2 md:w-full h-full flex flex-col gap-1 justify-center px-2 py-2  bg-black/60 rounded-md backdrop-blur-xl  ' >
                     <h2 className='font-redHat text-lg md:text-xl'>Background</h2>
@@ -100,11 +99,11 @@ function Page() {
             <div style={{
                 borderColor: primary,
             }} className="nav  w-full h-24 sm:h-32 flex justify-between border-b-[1px] items-center px-5">
-                <h1 style={{ color: textColor, fontFamily : font }} className={`font-${font} text-xl sm:text-3xl font-semibold`}>StyleCraft</h1>
+                <h1 style={{ color: textColor, fontFamily: font }} className={`font-${font} text-xl sm:text-3xl font-semibold`}>StyleCraft</h1>
                 <div className=' flex gap-2 justify-end w-full h-auto'>
-                    <a href='' style={{
+                    <a href='https://github.com/sanemishinazugawa11/StyleCraft' target='_blank' style={{
                         color: textColor,
-                        fontFamily : font
+                        fontFamily: font
 
                     }} className={`font-${font}  text-black  text-sm sm:text-lg md:text-xl lg:text-xl font-semibold px-3 py-2 rounded-md`}>
                         Github
@@ -112,7 +111,7 @@ function Page() {
 
                     <button onClick={() => { setIsopen(!isOpen) }} style={{
                         color: textColor,
-                        fontFamily : font
+                        fontFamily: font
                     }} className={`font-${font}  text-black  text-sm sm:text-lg md:text-xl lg:text-xl font-semibold px-3 py-2 rounded-md`}>
                         Export colors
                     </button>
@@ -122,9 +121,9 @@ function Page() {
 
             <section className="center w-full h-screen flex flex-col px-2 md:flex md:flex-row justify-between mt-10">
                 <div className='md:w-1/2  lg:h-auto py-2 flex flex-col gap-3 md:gap-5 justify-start md:justify-center px-3 '>
-                    <h1 style={{ color: textColor, fontFamily : font }} className={`font-${font} text-3xl sm:text-4xl  lg:text-5xl mt-3 text-black font-extrabold text-start`}>Choose the right font and color combination for your website.</h1>
-                    <h3 style={{ color: textColor, fontFamily : font }} className={`font-${font} text-2xl sm:text-3xl  lg:text-4xl  text-neutral-800 font-semibold text-start `}>Simple process for figuring right font and color combination.</h3>
-                    <h4 style={{ color: textColor, fontFamily : font }} className={`font-${font} text-xl sm:text-2xl  lg:text-3xl  rounded-lg  text-neutral-800  font-semibold text-start`}>Try colors on highlevel layout design of a website.</h4>
+                    <h1 style={{ color: textColor, fontFamily: font }} className={`font-${font} text-3xl sm:text-4xl  lg:text-5xl mt-3 text-black font-extrabold text-start`}>Choose the right font and color combination for your website.</h1>
+                    <h3 style={{ color: textColor, fontFamily: font }} className={`font-${font} text-2xl sm:text-3xl  lg:text-4xl  text-neutral-800 font-semibold text-start `}>Simple process for figuring right font and color combination.</h3>
+                    <h4 style={{ color: textColor, fontFamily: font }} className={`font-${font} text-xl sm:text-2xl  lg:text-3xl  rounded-lg  text-neutral-800  font-semibold text-start`}>Try colors on highlevel layout design of a website.</h4>
 
                 </div>
                 <div className='md:w-1/2 bg-slate-300 rounded-md  scale-100 flex flex-col gap-1 mt-10 md:mt-0 justify-around h-full p-3 md:p-5'>
@@ -160,8 +159,8 @@ function Page() {
                             className='w-full h-full object-cover rounded-lg absolute -z-10'
                         />
                         <div style={{ backgroundColor: primary }} className='absolute w-full h-full bg-black/60 backdrop-blur-md'></div>
-                        <h2 style={ { fontFamily : font , color : textColor}} className={`font-${font} text-lg md:text-xl z-10 text-white font-semibold text-center text-wrap lg:text-3xl`}>Why StyleCraft?</h2>
-                        <h2 style={ { fontFamily : font , color : textColor}} className={`font-${font} text-sm md:text-lg z-10 text-white  text-center text-wrap lg:text-xl`}>Color pallets are good, but try those colors on a real website.</h2>
+                        <h2 style={{ fontFamily: font, color: textColor }} className={`font-${font} text-lg md:text-xl z-10 text-white font-semibold text-center text-wrap lg:text-3xl`}>Why StyleCraft?</h2>
+                        <h2 style={{ fontFamily: font, color: textColor }} className={`font-${font} text-sm md:text-lg z-10 text-white  text-center text-wrap lg:text-xl`}>Color pallets are good, but try those colors on a real website.</h2>
                     </div>
                     <div className='relative overflow-hidden h-full col-span-4 md:col-span-2 rounded-lg  px-3 flex flex-col gap-2 justify-center items-center'>
                         <Image
@@ -172,8 +171,8 @@ function Page() {
                             className='w-full h-full object-cover rounded-lg absolute -z-10'
                         />
                         <div style={{ backgroundColor: primary }} className='absolute w-full h-full bg-black/60 backdrop-blur-md'></div>
-                        <h2 style={{fontFamily : font, color:textColor}} className={`font-${font} text-lg md:text-xl z-10 text-white font-semibold text-center text-wrap lg:text-3xl`}>Its simple and realistic!</h2>
-                        <h2 style={{fontFamily : font, color:textColor}} className={`font-${font} text-sm md:text-lg z-10 text-white  text-center text-wrap lg:text-xl`}>Color Palettes make it hard to pick. This tool distributes the colors on a real website,Push a few buttons, and there you have it! Your very own branding colors, ready to export.</h2>
+                        <h2 style={{ fontFamily: font, color: textColor }} className={`font-${font} text-lg md:text-xl z-10 text-white font-semibold text-center text-wrap lg:text-3xl`}>Its simple and realistic!</h2>
+                        <h2 style={{ fontFamily: font, color: textColor }} className={`font-${font} text-sm md:text-lg z-10 text-white  text-center text-wrap lg:text-xl`}>Color Palettes make it hard to pick. This tool distributes the colors on a real website,Push a few buttons, and there you have it! Your very own branding colors, ready to export.</h2>
 
                     </div>
                 </div>
@@ -181,17 +180,17 @@ function Page() {
             <section className='w-full  h-auto mt-10  '>
                 <div className='w-full h-[50vh] sm:h-[45vh] p-2 grid grid-cols-4 sm:grid-cols-4 gap-2 rounded-md '>
                     <div style={{ backgroundColor: primary }} className='col-span-4  md:col-span-2 bg-neutral-950 flex justify-center items-center rounded-md h-full'>
-                        <h2 style={{fontFamily: font}} className={`text-white text-center text-sm sm:text-lg font-${font} font-semibold md:text-xl xl:text-2xl`}>More features coming soon!!</h2>
+                        <h2 style={{ fontFamily: font, color:textColor }} className={`text-white text-center text-sm sm:text-lg font-${font} font-semibold md:text-xl xl:text-2xl`}>More features coming soon!!</h2>
                     </div>
                     <div style={{ backgroundColor: secondary }} className='col-span-4  flex justify-center gap-1 items-center md:col-span-2 bg-slate-200 rounded-md  h-full'>
-                        <a style={{fontFamily:font}} className={`font-${font} text-center font-semibold   text-sm sm:text-lg lg:text-xl`} href="https://coolors.co/" target='_blank'>Find colour pallets    </a>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-3 sm:size-4 md:size-5 ">
+                        <a style={{ fontFamily: font, color:textColor }} className={`font-${font} text-center font-semibold   text-sm sm:text-lg lg:text-xl`} href="https://coolors.co/" target='_blank'>Find colour pallets    </a>
+                        <svg style={{color : textColor}} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-3 sm:size-4 md:size-5 ">
                             <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
                         </svg>
                     </div>
                     <div className='col-span-4 m:col-span-1 md:col-span-1  h-full '>
                         <div style={{ backgroundColor: secondary }} className='w-full h-full bg-slate-200 rounded-md flex p-1 justify-center items-center'>
-                            <h1 style={{fontFamily : font}} className={`font-${font} font-bold text-center text-sm  lg:text-xl`}>100% free forever, no login required!
+                            <h1 style={{ fontFamily: font, color:textColor }} className={`font-${font} font-bold text-center text-sm  lg:text-xl`}>100% free forever, no login required!
                             </h1>
                         </div>
                     </div>
@@ -210,11 +209,11 @@ function Page() {
                             backgroundColor: secondary,
                             opacity: 0.8
                         }} className='text-lg px-6 sm:px-3 w-[90%] sm:w-[60%] lg:w-[45%]  rounded-md py-2 border-2 md:text-xl' type="text" />
-                        <button style={{ backgroundColor: secondary, color: bgColor,fontFamily : font }} className={`bg-neutral-950 text-white font-${font} font-semibold text-center text-sm md:text-lg px-3 py-2  md:px-5 md:py-3 rounded-md`}>Subscribe to news letter</button>
+                        <button style={{ backgroundColor: secondary, color: textColor, fontFamily: font }} className={`bg-neutral-950 text-white font-${font} font-semibold text-center text-sm md:text-lg px-3 py-2  md:px-5 md:py-3 rounded-md`}>Subscribe to news letter</button>
                     </div>
                     <div className='w-full h-auto flex gap-1  justify-center items-center '>
-                        <h2 style={{ color: bgColor,fontFamily : font }} className={`font-${font}  text-xl md:text-2xl font-semibold`}>StyleCraft ,</h2>
-                        <h3 style={{ color: bgColor,fontFamily : font }} className={`font-${font} text-xl md:text-2xl font-semibold`}>Made with love!</h3>
+                        <h2 style={{ color: textColor, fontFamily: font }} className={`font-${font}  text-xl md:text-2xl font-semibold`}>StyleCraft ,</h2>
+                        <h3 style={{ color: textColor, fontFamily: font }} className={`font-${font} text-xl md:text-2xl font-semibold`}>Made with love!</h3>
                     </div>
                 </div>
             </section>
